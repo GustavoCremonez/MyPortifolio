@@ -1,0 +1,13 @@
+.gitButton {
+	padding: 2rem;
+	border: 0.3rem solid rgb(75, 177, 196);
+	border-radius: 1rem;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+		rgba(0, 0, 0, 0.22) 0px 10px 10px;
+	margin-bottom: 1rem;
+	transition: all 0.3s;
+}
+
+.gitButton:hover {
+	transform: scale(1.1);
+}
