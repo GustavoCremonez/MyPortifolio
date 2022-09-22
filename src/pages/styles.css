@@ -31,6 +31,8 @@ body {
 	justify-content: space-around;
 	align-items: center;
 	color: rgba(255, 255, 255, 0.85);
+	flex-wrap: wrap;
+	gap: 5rem;
 }
 
 .title {
@@ -116,7 +118,20 @@ a {
 	position: relative;
 }
 
-.titleProjects {
+.textArea.top {
 	position: absolute;
-	top: 2rem;
+	top: 3rem;
+}
+
+@media only screen and (max-width: 600px) {
+	.wrapper {
+		text-align: center;
+		gap: 1rem;
+		padding: 3rem 1rem 0rem 1rem;
+	}
+	.textArea {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+	}
 }

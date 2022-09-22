@@ -40,11 +40,14 @@ export function Home() {
 				onClick={executeScroll}
 			/>
 			<div className='jobsArea'>
-				<h2
-					ref={myRef}
-					className='titleProjects'>
-					My Projects
-				</h2>
+				<div className='textArea top'>
+					<h2
+						ref={myRef}
+						className='title'>
+						My Projects
+					</h2>
+					<span className='span'>Here are some of my projects</span>
+				</div>
 			</div>
 		</div>
 	);
