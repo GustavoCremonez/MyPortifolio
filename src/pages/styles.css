@@ -78,10 +78,12 @@ a {
 	font-size: 3rem;
 	position: sticky;
 	cursor: pointer;
+	color: rgba(255, 255, 255, 0.85);
 	-webkit-animation: slide-bottom 1.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s
 		infinite alternate both;
 	animation: slide-bottom 1.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s infinite
 		alternate both;
+	margin-bottom: 10rem;
 }
 
 @-webkit-keyframes slide-bottom {
@@ -103,4 +105,18 @@ a {
 		-webkit-transform: translateY(100px);
 		transform: translateY(100px);
 	}
+}
+
+.jobsArea {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.titleProjects {
+	position: absolute;
+	top: 2rem;
 }

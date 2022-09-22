@@ -1,3 +1,5 @@
+import React, { useRef } from 'react';
+
 import { LinkButton } from '../components/button/Button';
 import { AiFillCaretDown } from '@react-icons/all-files/ai/AiFillCaretDown ';
 
@@ -5,11 +7,15 @@ import MyProfile from '../../public/profile.jpg';
 import './styles.css';
 
 export function Home() {
+	const myRef = useRef(null);
+
+	const executeScroll = () => myRef.current.scrollIntoView();
+
 	return (
 		<div>
 			<div className='wrapper'>
 				<div className='textArea'>
-					<h1 className='title'>Hey, I'm Gustavo Cremonez ;)</h1>
+					<h1 className='title'>Hey, my name is Gustavo Cremonez ;)</h1>
 					<span className='span'>I'm a fullstack web developer</span>
 				</div>
 
@@ -29,7 +35,17 @@ export function Home() {
 					text='My Linkedin'
 				/>
 			</div>
-			<AiFillCaretDown className='arrowIcon' />
+			<AiFillCaretDown
+				className='arrowIcon'
+				onClick={executeScroll}
+			/>
+			<div className='jobsArea'>
+				<h2
+					ref={myRef}
+					className='titleProjects'>
+					My Projects
+				</h2>
+			</div>
 		</div>
 	);
 }
