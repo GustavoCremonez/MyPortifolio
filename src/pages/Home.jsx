@@ -1,15 +1,34 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 import { LinkButton } from '../components/button/Button';
 import { AiFillCaretDown } from '@react-icons/all-files/ai/AiFillCaretDown ';
 
-import MyProfile from '../../public/profile.jpg';
+import MyProfile from '/src/profile.jpg';
 import './styles.css';
 
 export function Home() {
+	const [shouldShowButtons, setShouldShowButtons] = useState(true);
+	const [lastYPos, setLastYPos] = useState(0);
 	const myRef = useRef(null);
 
 	const executeScroll = () => myRef.current.scrollIntoView();
+
+	useEffect(() => {
+		function handleScroll() {
+			const yPos = window.scrollY;
+			const isScrollingUp = yPos < lastYPos;
+
+			setShouldShowButtons(isScrollingUp);
+			setLastYPos(yPos);
+		}
+
+		window.addEventListener('scroll', handleScroll, false);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll, false);
+		};
+	}, [lastYPos]);
 
 	return (
 		<div>
@@ -24,21 +43,26 @@ export function Home() {
 					alt='My pic'
 					className='profilePic'
 				/>
-			</div>
-			<div className='buttonControl'>
-				<LinkButton
-					href='https://github.com/GustavoCremonez'
-					text='My Github'
+
+				<AiFillCaretDown
+					className='arrowIcon'
+					onClick={executeScroll}
 				/>
-				<LinkButton
-					href='https://www.linkedin.com/in/gustavocremonez/'
-					text='My Linkedin'
-				/>
+
+				<motion.div
+					className='buttonControl'
+					animate={{ opacity: shouldShowButtons ? 1 : 0 }}
+					initial={{ opacity: 0 }}>
+					<LinkButton
+						href='https://github.com/GustavoCremonez'
+						button='FiGithub'
+					/>
+					<LinkButton
+						href='https://www.linkedin.com/in/gustavocremonez/'
+						button='FiLinkedin'
+					/>
+				</motion.div>
 			</div>
-			<AiFillCaretDown
-				className='arrowIcon'
-				onClick={executeScroll}
-			/>
 			<div className='jobsArea'>
 				<div className='textArea top'>
 					<h2
