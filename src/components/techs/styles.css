@@ -1,0 +1,17 @@
+i {
+	font-size: 3rem;
+	text-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+		rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.technologies {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 0.3;
+}
+
+i:hover {
+	transform: scale(1.1);
+}

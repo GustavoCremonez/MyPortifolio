@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 
 import { LinkButton } from '../components/button/Button';
 import { Projects } from '../components/projects/Projects';
+import { Tech } from '../components/techs/Tech';
 
 import { AiFillCaretDown } from '@react-icons/all-files/ai/AiFillCaretDown ';
 
@@ -79,6 +80,63 @@ export function Home() {
 					className='title'>
 					My Stack
 				</h3>
+
+				<div className='techsArea'>
+					<h4 className='subtitle'>Back-end Techs</h4>
+
+					<div className='backEndArea'>
+						<Tech
+							name='NodeJs'
+							logo='devicon-nodejs-plain'
+						/>
+						<Tech
+							name='C#'
+							logo='devicon-csharp-line-wordmark'
+						/>
+						<Tech
+							name='Express'
+							logo='devicon-express-original'
+						/>
+						<Tech
+							name='.Net'
+							logo='devicon-dot-net-plain-wordmark'
+						/>
+					</div>
+
+					<h4 className='subtitle'>FrontEnd Techs</h4>
+
+					<div className='frontEndArea'>
+						<Tech
+							name='React'
+							logo='devicon-react-original-wordmark'
+						/>
+						<Tech
+							name='HTML'
+							logo='devicon-html5-plain'
+						/>
+						<Tech
+							name='CSS'
+							logo='devicon-css3-plain'
+						/>
+						<Tech
+							name='JavaScript'
+							logo='devicon-javascript-plain'
+						/>
+					</div>
+
+					<h4 className='subtitle'>Database Techs</h4>
+
+					<div className='DBArea'>
+						<Tech
+							name='SQL Server'
+							logo='devicon-microsoftsqlserver-plain-wordmark'
+						/>
+						<Tech
+							name='MongoDB'
+							logo='devicon-mongodb-plain-wordmark'
+						/>
+					</div>
+				</div>
 			</div>
 
 			<div className='jobsArea'>
