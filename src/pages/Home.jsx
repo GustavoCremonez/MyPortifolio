@@ -83,8 +83,23 @@ export function Home() {
 						<Projects
 							title='Chabar'
 							text='website created with the intention of being an invitation to my chabar (meeting to help people move into their new home with gifts) and a guest control'
-							techs={['NodeJS', 'EJS', 'MongoDB', 'Bulma']}
+							techs={['NodeJS(Express)', 'EJS', 'MongoDB(Mongoose)', 'Bulma']}
 							visit='https://chabarvihegu.com/'
+						/>
+
+						<Projects
+							title='Portfólio (This)'
+							text='where are you at the moment, my cover letter and presentation of my projects'
+							techs={['ReactJS', 'CSS']}
+							visit='#'
+							target='false'
+						/>
+
+						<Projects
+							title='API RESTful'
+							text='RESTful API created in a test for employment, a simple CRUD and consumption of an external API all documentation is in the visit link'
+							techs={['NodeJS(Express)', 'MongoDB(Mongoose)', 'AXIOS']}
+							visit='https://github.com/GustavoCremonez/teste-integrado'
 						/>
 					</div>
 				</div>

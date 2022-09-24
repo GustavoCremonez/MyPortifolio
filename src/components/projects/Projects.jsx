@@ -18,7 +18,7 @@ export function Projects(props) {
 					<a
 						class='card__link'
 						href={props.visit}
-						target='_blank'>
+						target={props.target ? '' : '_blank'}>
 						Visit now<i class='fas fa-arrow-right'></i>
 					</a>
 				</p>
