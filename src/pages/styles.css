@@ -1,30 +1,7 @@
-body {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: start;
-	background-image: radial-gradient(
-		circle,
-		#bebebe,
-		#bebebe,
-		#bebebe,
-		#bdbdbd,
-		#bdbdbd,
-		#b5b5b5,
-		#aeaeae,
-		#a6a6a6,
-		#969696,
-		#868686,
-		#767676,
-		#676767
-	);
-}
-
 .wrapper {
+	padding: 1.5rem 0.5rem;
 	min-height: 100vh;
-	padding: 3rem 5rem 0rem 5rem;
-	min-width: 100vw;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: start;
@@ -35,14 +12,20 @@ body {
 }
 
 .title {
+	text-align: center;
 	font-size: 2rem;
 	letter-spacing: 0.1rem;
 }
 
-.span {
+.emoji {
+	transform: rotate(90deg);
+}
+
+.subtitle {
 	font-size: 1.7rem;
 	letter-spacing: -0.1rem;
-	padding-bottom: 3rem;
+	text-align: center;
+	margin-bottom: 1.9rem;
 }
 
 a {
@@ -70,35 +53,33 @@ a {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 1.3rem;
+	gap: 0.5rem;
 	padding: 1rem;
-	border-radius: 50rem;
-	border: 0.4rem solid rgba(255, 255, 255, 0.85);
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	position: fixed;
-	bottom: 1rem;
-	left: 1rem;
+	bottom: 3rem;
+	left: 0;
 }
 
 .arrowIcon {
 	font-size: 3rem;
 	cursor: pointer;
 	color: rgba(255, 255, 255, 0.85);
-	-webkit-animation: slide-bottom 1.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s
+	-webkit-animation: slide-bottom 1.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.7s
 		infinite alternate both;
-	animation: slide-bottom 1.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s infinite
-		alternate both;
+	animation: slide-bottom 1.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.7s
+		infinite alternate both;
 	margin-bottom: 10rem;
 }
 
 .jobsArea {
 	min-height: 100vh;
-	width: 100vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	gap: 1.3rem;
 	color: rgba(255, 255, 255, 0.85);
+	padding: 1rem 0;
 }
 
 .heading {
@@ -107,13 +88,6 @@ a {
 
 .heading__title {
 	font-weight: 600;
-}
-
-.heading__credits {
-	margin: 10px 0px;
-	color: #888888;
-	font-size: 25px;
-	transition: all 0.5s;
 }
 
 .heading__link {
@@ -127,16 +101,23 @@ a {
 .cards {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
-	z-index: -1;
+	justify-content: center;
+	align-items: center;
+}
+
+.main-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1.5rem;
 }
 
 .card {
-	margin: 20px;
 	padding: 1rem;
-	width: 500px;
-	min-height: 200px;
-	border-radius: 10px;
+	min-height: 15rem;
+	width: 30rem;
+	border-radius: 10rem;
 	box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
 	transition: all 0.2s;
 	z-index: 0;
@@ -194,6 +175,7 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-wrap: wrap;
 	padding: 1rem;
 }
 
@@ -202,42 +184,22 @@ a {
 	display: flex;
 	gap: 1rem;
 	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 /* RESPONSIVE */
 
-@media (max-width: 1600px) {
-	.cards {
-		justify-content: center;
-	}
-}
-
 @media only screen and (max-width: 600px) {
 	.wrapper {
-		text-align: center;
-		gap: 1rem;
-		padding: 3rem 1rem 0rem 1rem;
+		gap: 0;
 	}
-	.textArea {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		width: 100vw;
-		gap: 1.3rem;
+	.buttonControl {
+		bottom: 13%;
 	}
 
 	.card {
-		width: 90%;
-	}
-
-	.buttonControl {
-		width: 7rem;
-		gap: 0.5rem;
-		padding: 0.3rem;
-		border: none;
-		box-shadow: none;
-		left: 0.2rem;
+		width: 90vw;
 	}
 }
 

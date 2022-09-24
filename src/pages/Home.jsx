@@ -38,8 +38,13 @@ export function Home() {
 			initial={{ opacity: 0 }}>
 			<div className='wrapper'>
 				<div className='textArea'>
-					<h1 className='title'>Hey, my name is Gustavo Cremonez ;)</h1>
-					<span className='span'>I'm a fullstack web developer</span>
+					<h1 className='title'>
+						Hey, my name is Gustavo Cremonez
+						<div className='emoji'>
+							<span> :)</span>
+						</div>
+					</h1>
+					<p className='subtitle'>I'm a fullstack web developer</p>
 				</div>
 
 				<img
@@ -79,7 +84,7 @@ export function Home() {
 				</div>
 
 				<div className='projects'>
-					<div class='main-container'>
+					<div className='main-container'>
 						<Projects
 							title='Chabar'
 							text='website created with the intention of being an invitation to my chabar (meeting to help people move into their new home with gifts) and a guest control'

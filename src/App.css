@@ -4,12 +4,28 @@ html,
 *,
 *::after,
 *::before {
+	scroll-behavior: smooth;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	scroll-behavior: smooth;
 }
 
 body {
 	font-family: Nunito;
+	background-image: radial-gradient(
+		circle,
+		#bebebe,
+		#bebebe,
+		#bebebe,
+		#bdbdbd,
+		#bdbdbd,
+		#b5b5b5,
+		#aeaeae,
+		#a6a6a6,
+		#969696,
+		#868686,
+		#767676,
+		#676767
+	);
+	max-width: 100vw;
 }
