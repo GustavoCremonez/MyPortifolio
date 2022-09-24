@@ -73,13 +73,17 @@ export function Home() {
 				</motion.div>
 			</div>
 
+			<div className='TechExperience'>
+				<h3
+					ref={myRef}
+					className='title'>
+					My Stack
+				</h3>
+			</div>
+
 			<div className='jobsArea'>
 				<div className='textArea top'>
-					<h3
-						ref={myRef}
-						className='title'>
-						My Projects
-					</h3>
+					<h3 className='title'>My Projects</h3>
 					<span className='span'>Here are some of my projects</span>
 				</div>
 
