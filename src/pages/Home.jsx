@@ -2,6 +2,8 @@ import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 import { LinkButton } from '../components/button/Button';
+import { Projects } from '../components/projects/Projects';
+
 import { AiFillCaretDown } from '@react-icons/all-files/ai/AiFillCaretDown ';
 
 import MyProfile from '/src/profile.jpg';
@@ -78,22 +80,12 @@ export function Home() {
 
 				<div className='projects'>
 					<div class='main-container'>
-						<div class='cards'>
-							<div class='card card-1'>
-								<div class='card__icon'>
-									<i class='fas fa-bolt'></i>
-								</div>
-								<h2 class='card__title'>Chabar</h2>
-								<p class='card__apply'>
-									<a
-										class='card__link'
-										href='https://chabarvihegu.com/'
-										target='_blank'>
-										Visit now<i class='fas fa-arrow-right'></i>
-									</a>
-								</p>
-							</div>
-						</div>
+						<Projects
+							title='Chabar'
+							text='website created with the intention of being an invitation to my chabar (meeting to help people move into their new home with gifts) and a guest control'
+							techs={['NodeJS', 'EJS', 'MongoDB', 'Bulma']}
+							visit='https://chabarvihegu.com/'
+						/>
 					</div>
 				</div>
 			</div>
