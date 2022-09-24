@@ -63,14 +63,36 @@ export function Home() {
 					/>
 				</motion.div>
 			</div>
+
 			<div className='jobsArea'>
 				<div className='textArea top'>
-					<h2
+					<h3
 						ref={myRef}
 						className='title'>
 						My Projects
-					</h2>
+					</h3>
 					<span className='span'>Here are some of my projects</span>
+
+					<div className='projects'>
+						<div class='main-container'>
+							<div class='cards'>
+								<div class='card card-1'>
+									<div class='card__icon'>
+										<i class='fas fa-bolt'></i>
+									</div>
+									<h2 class='card__title'>Chabar</h2>
+									<p class='card__apply'>
+										<a
+											class='card__link'
+											href='https://chabarvihegu.com/'
+											target='_blank'>
+											Visit now<i class='fas fa-arrow-right'></i>
+										</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
